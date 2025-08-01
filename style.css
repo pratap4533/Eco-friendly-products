@@ -1,0 +1,252 @@
+/* Reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2fff2;
+  color: #2e4d2e;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c5f5cc;
+  padding: 1rem 2rem;
+}
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar a {
+  text-decoration: none;
+  color: #358135;
+  font-weight: 500;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+#cart-indicator {
+  background-color: #e5f7e5;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Hero Section (Home page) */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #e6f4ea;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  background-color: #2e9243;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #6da88e;
+  box-shadow: 0 0 10px #a7d6ba;
+}
+
+/* Section titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #2f5934;
+}
+
+/* Section titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #2f5934;
+}
+
+/* Section titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #2f5934;
+}
+
+/* Shop Section */
+.shop {
+  padding: 3rem 2rem;
+  background-color: #f9fff9;
+  overflow-x: auto; /* allow horizontal scroll if needed */
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: row; /* horizontal layout */
+  gap: 2rem;
+  justify-content: flex-start;
+  flex-wrap: nowrap; /* keep in one row */
+  animation: slideIn 1s ease-out;
+}
+
+/* Product card styling */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  flex-shrink: 0; /* prevents shrinking in row layout */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.product-card h3 {
+  color: #2e4d2e;
+}
+.product-card p {
+  color: #4a784a;
+  margin-top: 0.5rem;
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Mission Section */
+.mission {
+  padding: 3rem 2rem;
+  background-color: #eef9ef;
+}
+.mission-text {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #3a5f3a;
+  line-height: 1.6;
+}
+
+/* Cart Section */
+.cart {
+  padding: 3rem 2rem;
+  background-color: #f0fff4;
+}
+.cart-info {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #3c6e47;
+}
+
+/* Login Section */
+.login {
+  padding: 3rem 2rem;
+  background-color: #f9fff9;
+  text-align: center;
+}
+.login input {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #d8f3dc;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.add-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #29532e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #3c7545;
+}
+
+.cart-count {
+  display: block;
+  margin-top: 0.4rem;
+  color: #2f5934;
+  font-size: 0.9rem;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleEffect 0.6s linear;
+  background-color: rgba(0, 100, 0, 0.3); /* Greenish ripple */
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(15);
+    opacity: 0;
+  }
+}
